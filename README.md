@@ -1,14 +1,12 @@
-# web-introduction
+# IT 207 - Introduction to Web Programming
 
 Project for university level course called - Introduction to Web Programming
-
-# Introduction to Web Programming
 
 Welcome to the Introduction to Web Programming course! This course is designed to introduce you to the fundamentals of web development, covering essential topics and technologies needed to create dynamic and interactive websites.
 
 ## Course Description
 
-This course provides a comprehensive introduction to web programming concepts and techniques. Through a combination of lectures, practical exercises, and projects, you will learn the basics of HTML, CSS, JavaScript, and more.
+This course provides a comprehensive introduction to web programming concepts and techniques. Through a combination of lectures, practical exercises, and projects, you will learn the basics of PHP, MySql, HTML, CSS, JavaScript, and more.
 
 ## Course Structure
 
