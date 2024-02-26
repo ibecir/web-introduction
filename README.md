@@ -34,6 +34,10 @@ This course provides a comprehensive introduction to web programming concepts an
   - Overview of internet
   - Internet protocols
   - Debugging requests and packages
+  - Github overview (creating repository and opening PR)
+  - Backend and frontend
+  - Amela as a collaborator for PRs
+- Reading materials (https://docs.google.com/document/d/1nc05FpIhOQ5hfRPiKAiicOd1oAe22TpvqEx-VMKG5rQ/edit?usp=sharing)
 - ## Overview of web technologies
 
 ### Week 2: Styling with CSS
