@@ -12,10 +12,29 @@ This course provides a comprehensive introduction to web programming concepts an
 
 ### Week 1: Introduction to HTML
 
-- Overview of web development
-- Introduction to HTML syntax and structure
-- Creating basic web pages with HTML
-- Semantic HTML elements
+- Introduction to tutorials format
+  - How tutorials will be conducted
+  - How quizzes will be conducted
+- Environment Setup
+  - How to install necessary tools on different platforms:
+    - Windows 10/11 - https://pureinfotech.com/install-xampp-windows-10/
+    - MacOS - https://phpandmysql.com/extras/installing-mamp/
+    - Linux - https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-22-04
+      - Apache
+      - PHP 8
+      - MySql
+    - VSCode
+      - Prettier
+      - HTML CSS Support
+      - PHP Debug
+      - PHP Intelephense
+      - vscode-icons
+    - DBeaver
+- Internet concepts
+  - Overview of internet
+  - Internet protocols
+  - Debugging requests and packages
+- ## Overview of web technologies
 
 ### Week 2: Styling with CSS
 
