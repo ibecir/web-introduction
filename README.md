@@ -22,14 +22,14 @@ This course provides a comprehensive introduction to web programming concepts an
     - Linux - https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-22-04
       - Apache
       - PHP 8
-      - MySql
+      - MySql Server VS MySql RDBMS
     - VSCode
       - Prettier
       - HTML CSS Support
       - PHP Debug
       - PHP Intelephense
       - vscode-icons
-    - DBeaver
+    - DBeaver [https://dbeaver.com/academic-license/]
 - Internet concepts
   - Overview of internet
   - Internet protocols
