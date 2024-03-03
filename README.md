@@ -42,10 +42,31 @@ This course provides a comprehensive introduction to web programming concepts an
 
 ### Week 2: Styling with CSS
 
-- Introduction to CSS
-- Basic CSS syntax and selectors
-- Applying styles to HTML elements
-- CSS box model
+- Introduction to HTML
+  - Basics
+  - Navbar
+  - Images and videos
+  - Forms
+  - Lists
+  - Links
+  - Tables
+  - Canvas
+- CSS
+  - Levels of CSS
+  - Selectors
+- SCSS
+  - What is SCSS and how it works
+  - How to compile it to CSS
+- Bootstrap
+  - Overview
+  - Grid system
+  - Tables
+  - Forms
+  - Alerts and badges
+  - Carousel
+  - Modal
+- Theme
+  - How to download and tweak the bootstrap theme so it fits your project
 
 ### Week 3: Responsive Web Design
 
