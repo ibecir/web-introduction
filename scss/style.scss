@@ -1,0 +1,70 @@
+// Define mixins
+// SCSS mixins enable the reuse of sets of CSS declarations, similar to functions in programming languages.
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Define variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+
+// Apply styles using nesting and mixins
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: $secondary-color;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+
+  a {
+    color: #333;
+    text-decoration: none;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+// SCSS supports nesting of CSS selectors, improving readability and organization of styles.
+main {
+  padding: 20px;
+
+  section {
+    h2 {
+      color: $primary-color;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  }
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+
+  @include flex-center; // Using mixin
+}
