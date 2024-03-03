@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Form Example</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Bootstrap Form Example</h2>
+      <form>
+        <div class="mb-3">
+          <label for="text" class="form-label">Text Input:</label>
+          <input type="text" class="form-control" id="text" name="text" />
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Input:</label>
+          <input type="email" class="form-control" id="email" name="email" />
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password Input:</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="number" class="form-label">Number Input:</label>
+          <input type="number" class="form-control" id="number" name="number" />
+        </div>
+
+        <div class="mb-3">
+          <label for="date" class="form-label">Date Input:</label>
+          <input type="date" class="form-control" id="date" name="date" />
+        </div>
+
+        <div class="mb-3 form-check">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="checkbox"
+            name="checkbox"
+          />
+          <label class="form-check-label" for="checkbox">Checkbox</label>
+        </div>
+
+        <div class="mb-3">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="radio"
+              id="radio1"
+              value="radio1"
+            />
+            <label class="form-check-label" for="radio1">Radio Button 1</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="radio"
+              id="radio2"
+              value="radio2"
+            />
+            <label class="form-check-label" for="radio2">Radio Button 2</label>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="select" class="form-label">Select:</label>
+          <select class="form-select" id="select" name="select">
+            <option selected>Select an option</option>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="textarea" class="form-label">Textarea:</label>
+          <textarea
+            class="form-control"
+            id="textarea"
+            name="textarea"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
