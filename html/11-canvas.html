@@ -1,0 +1,35 @@
+<!--
+    In HTML, the <canvas> element is used to draw graphics, animations, and other 
+    visual images on a webpage using JavaScript. It provides a drawable region 
+    defined in HTML code, where you can dynamically generate and manipulate 
+    graphics through JavaScript code.
+
+    The <canvas> element itself doesn't have any inherent graphical capabilities; 
+    instead, it serves as a container for graphics. You use JavaScript to access 
+    the drawing context of the canvas (getContext('2d') for 2D graphics, or 
+    getContext('webgl') for 3D graphics), and then you can use a variety of 
+    methods to draw shapes, text, images, and more onto the canvas.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Example</title>
+  </head>
+  <body>
+    <h1>Drawing with Canvas</h1>
+    <canvas
+      id="myCanvas"
+      width="200"
+      height="100"
+      style="border: 1px solid black"
+    ></canvas>
+    <script>
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+      ctx.fillStyle = "#FF0000";
+      ctx.fillRect(10, 10, 150, 80);
+    </script>
+  </body>
+</html>

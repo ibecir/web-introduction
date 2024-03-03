@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Example</title>
+  </head>
+  <body>
+    <h1>Sample Form</h1>
+    <form action="/submit" method="post">
+      <label for="text">Text Input:</label><br />
+      <input type="text" id="text" name="text" /><br /><br />
+
+      <label for="email">Email Input:</label><br />
+      <input type="email" id="email" name="email" /><br /><br />
+
+      <label for="password">Password Input:</label><br />
+      <input type="password" id="password" name="password" /><br /><br />
+
+      <label for="number">Number Input:</label><br />
+      <input type="number" id="number" name="number" /><br /><br />
+
+      <label for="date">Date Input:</label><br />
+      <input type="date" id="date" name="date" /><br /><br />
+
+      <label for="checkbox">Checkbox:</label><br />
+      <input
+        type="checkbox"
+        id="checkbox"
+        name="checkbox"
+        value="checkbox"
+      /><br /><br />
+
+      <label for="radio1">Radio Button 1:</label>
+      <input type="radio" id="radio1" name="radio" value="radio1" /><br />
+
+      <label for="radio2">Radio Button 2:</label>
+      <input type="radio" id="radio2" name="radio" value="radio2" /><br /><br />
+
+      <label for="select">Select:</label><br />
+      <select id="select" name="select">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option></select
+      ><br /><br />
+
+      <label for="textarea">Textarea:</label><br />
+      <textarea id="textarea" name="textarea" rows="4" cols="50"></textarea
+      ><br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
