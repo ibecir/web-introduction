@@ -68,9 +68,9 @@ This course provides a comprehensive introduction to web programming concepts an
 - Theme
   - How to download and tweak the bootstrap theme so it fits your project
 
-### Week 3: Responsive Web Design
+### Week 3: Introduction to JavaScript
 
-- Understanding responsive design principles
+- JS Overview
 - Media queries and breakpoints
 - Flexbox and Grid layout techniques
 - Building responsive web pages

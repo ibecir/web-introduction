@@ -1,32 +1,35 @@
-Certainly! Here are a few more HTML examples covering different aspects: Using
-<div>
-  and
-  <span>
-    for Structure and Styling: html Copy code
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Div and Span Example</title>
-        <style>
-          .container {
-            border: 1px solid black;
-            padding: 20px;
-          }
-          .highlight {
-            color: red;
-          }
-        </style>
-      </head>
-      <body>
-        <div class="container">
-          <h1>This is a <span class="highlight">heading</span></h1>
-          <p>
-            This is a paragraph inside a <span class="highlight">div</span>.
-          </p>
-        </div>
-      </body>
-    </html></span
-  >
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Div and Span Example</title>
+    <style>
+      .container {
+        border: 1px solid black;
+        padding: 20px;
+      }
+      .highlight {
+        color: red;
+      }
+      #web {
+        text-transform: uppercase;
+      }
+      .capitalize-me {
+        text-transform: uppercase;
+      }
+      p {
+        text-transform: lowercase;
+      }
+    </style>
+  </head>
+  <body>
+    <p style="padding: 50px">Everything IN P IS LOWERCASE</p>
+    <div id="web" class="capitalize-me">This is capitalized</div>
+    <div class="container">
+      <h1>This is a <span class="highlight capitalize-me">heading</span></h1>
+      <p>This is a paragraph inside a <span class="highlight">div</span>.</p>
+    </div>
+    <p>THIS THING AS WELL</p>
+  </body>
+</html>
