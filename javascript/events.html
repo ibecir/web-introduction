@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Example</title>
+  </head>
+  <body>
+    <button id="myButton" onclick="sayHelloAlso()">Click me!</button>
+    <div id="output"></div>
+
+    <script>
+      // Get a reference to the button element
+      var button = document.getElementById("myButton");
+
+      // Add an event listener to the button
+      button.addEventListener("click", function () {
+        // This function will be executed when the button is clicked
+        var outputElement = document.getElementById("output");
+        outputElement.textContent = "Button clicked!";
+      });
+
+      sayHelloAlso = () => {
+        alert("Hello, world!");
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation Example</title>
+    <style>
+      .highlight {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="message">Hello, world!</p>
+    <button id="changeColorBtn">Change Color</button>
+
+    <script>
+      // DOM manipulation with JavaScript
+      const messageElement = document.getElementById("message");
+      const changeColorButton = document.getElementById("changeColorBtn");
+
+      changeColorButton.addEventListener("click", function () {
+        messageElement.classList.toggle("highlight");
+      });
+    </script>
+  </body>
+</html>

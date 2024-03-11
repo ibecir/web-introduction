@@ -70,10 +70,15 @@ This course provides a comprehensive introduction to web programming concepts an
 
 ### Week 3: Introduction to JavaScript
 
-- JS Overview
-- Media queries and breakpoints
-- Flexbox and Grid layout techniques
-- Building responsive web pages
+- Introduction to Javascript
+- Javascript rendering
+- ECMAScript (ES) Standards
+- Variables and datatypes
+- Events
+- Functions
+- Classes
+- DOM Manipulation
+- Asynchronous Programming
 
 ### Week 4: Introduction to JavaScript
 
