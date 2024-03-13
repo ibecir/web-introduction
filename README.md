@@ -80,12 +80,15 @@ This course provides a comprehensive introduction to web programming concepts an
 - DOM Manipulation
 - Asynchronous Programming
 
-### Week 4: Introduction to JavaScript
+### Week 4: Utilities libraries for frontend development
 
-- Fundamentals of JavaScript
-- Variables, data types, and operators
-- Control flow and loops
-- Functions and events
+- Bootstrap
+- JQuery
+- Datatables
+- SPApp
+
+- Highcharts
+- Select2
 
 ### Week 5: Document Object Model (DOM)
 
