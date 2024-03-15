@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap 5 Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../assets/css/select2.min.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm-6">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"
+                >Email address</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+              <div id="emailHelp" class="form-text">
+                We'll never share your email with anyone else.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="state" class="form-label">State</label>
+              <select
+                class="js-example-basic-multiple"
+                name="states[]"
+                multiple="multiple"
+                style="width: 400px !important"
+              >
+                <option value="AL">Alabama</option>
+                <option value="WY">Wyoming</option>
+              </select>
+            </div>
+            <div class="mb-3 form-check">
+              <select
+                id="tags-select2"
+                multiple="multiple"
+                class="form-control"
+              >
+                <option selected="selected">orange</option>
+                <option>white</option>
+                <option>purple</option>
+              </select>
+            </div>
+            <div class="mb-3 form-check">
+              <select
+                id="default-tags-select2"
+                multiple="multiple"
+                class="form-control"
+              ></select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/select2.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".js-example-basic-multiple").select2({
+        //maximumSelectionLength: 1,
+        tags: true,
+      });
+
+      $("#tags-select2").select2({
+        tags: true,
+        tokenSeparators: [",", " "],
+      });
+
+      $("#default-tags-select2").select2({
+        data: ["a", "b"],
+        tags: true,
+      });
+      $("#default-tags-select2").trigger("change.select2");
+    });
+  </script>
+</html>
