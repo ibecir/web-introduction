@@ -1,4 +1,5 @@
-getPosts = () => {
+_getPosts = () => {
+  // Through the vanilla JS / plain JS
   return fetch("https://jsonplaceholder.typicode.com/posts")
     .then((response) => response.json())
     .then((data) => {
@@ -25,6 +26,31 @@ getPosts = () => {
     .catch((error) => console.log(error));
 };
 
+getPosts = () => {
+  // Through the library called JQuery
+  $.get("https://jsonplaceholder.typicode.com/posts", (data) => { // Callback function
+    let output = "";
+    data.forEach((post) => {
+      output += `
+                    <div class="row">
+                        <div class="col-md-8">
+                            <!-- Post -->
+                            <div class="card mb-4">
+                            <a onclick="getCommentsJquery(${post.id})">
+                                <div class="card-body">
+                                <h5 class="card-title">${post.title}</h5>
+                                <p class="card-text">${post.body}</p>
+                                </div>
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+    });
+    document.getElementById("container").innerHTML = output;
+  });
+}
+
 getComments = (postId) => {
   fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
     .then((response) => response.json())
@@ -48,8 +74,8 @@ getComments = (postId) => {
 
 getCommentsJquery = (postId) => {
   $.get(
-    `https://jsonplaceholder.typicode.com/posts/${postId}/comments`,
-    (data) => {
+    `https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
+    .done(function (data) { // Callback function - once request is done
       let commentsHtml = ``;
 
       data.map((comment) => {
@@ -64,16 +90,12 @@ getCommentsJquery = (postId) => {
       });
       $("#myModal .modal-body .table > tbody").html(commentsHtml);
       $("#myModal").modal("show");
-      new DataTable("#comments-table");
-    }
-  )
-    .done(function () {
-      console.log("Second Success");
+      new DataTable("#comments-table"); // Initialize datatable
     })
-    .fail(function () {
+    .fail(function () { // Callback function - once request fails
       console.log("Error happened");
     })
-    .always(function () {
+    .always(function () { // Callback function - always
       console.log("Executed no matter is it finishes with success or error");
     });
 };
@@ -95,4 +117,4 @@ const addComment = () => {
 }
 
 getPosts();
-addComment();
+//addComment();
