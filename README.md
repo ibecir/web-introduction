@@ -86,7 +86,6 @@ This course provides a comprehensive introduction to web programming concepts an
 - JQuery
 - Datatables
 - SPApp
-
 - Highcharts
 - Select2
 

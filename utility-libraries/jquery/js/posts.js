@@ -78,4 +78,21 @@ getCommentsJquery = (postId) => {
     });
 };
 
+const addComment = () => {
+  $("button").click(function () {
+    alert("Button clicked");
+  });
+  $.post(
+    "https://klix.ba",
+    {
+      name: "Donald Duck",
+      city: "Duckburg",
+    },
+    function (data, status) {
+      alert("Data: " + data + "\nStatus: " + status);
+    }
+  );
+}
+
 getPosts();
+addComment();
