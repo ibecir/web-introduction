@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/spapp.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="col-sm-6">
+      <nav role="navigation">
+        <ul>
+          <li><a href="#profile">User Profile</a></li>
+          <li><a href="#users">Users List</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm-12">
+          <main id="spapp" role="main">
+            <section id="profile" data-load="profile.html"></section>
+            <section id="users" data-load="users.html"></section>
+          </main>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/jquery.spapp.min.js"></script>
+  <script>
+    let app = $.spapp({
+      templateDir: "./vtpl/",
+    });
+
+    app.run();
+  </script>
+</html>
