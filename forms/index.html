@@ -1,0 +1,266 @@
+<!-- https://jqueryvalidation.org/documentation/ -->
+<!-- https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/extended-ui-blockui.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Form Example</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/spinkit.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Bootstrap Form Example</h2>
+      <form id="bootstrap-form" method="post">
+        <div class="mb-3">
+          <label for="text" class="form-label">First Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="first_name"
+            name="first_name"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="text" class="form-label">Last Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="last_name"
+            name="last_name"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="text" class="form-label">Username:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            name="username"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Input:</label>
+          <input type="email" class="form-control" id="email" name="email" />
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password Input:</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="confirm_password" class="form-label"
+            >Confirm Password Input:</label
+          >
+          <input
+            type="confirm_password"
+            class="form-control"
+            id="confirm_password"
+            name="confirm_password"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="number" class="form-label">Number Input:</label>
+          <input type="number" class="form-control" id="number" name="number" />
+        </div>
+
+        <div class="mb-3">
+          <label for="date" class="form-label">Date Input:</label>
+          <input type="date" class="form-control" id="date" name="date" />
+        </div>
+
+        <div class="mb-3 form-check">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="checkbox"
+            name="checkbox"
+          />
+          <label class="form-check-label" for="checkbox">Checkbox</label>
+        </div>
+
+        <div class="mb-3">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="radio"
+              id="radio1"
+              value="radio1"
+            />
+            <label class="form-check-label" for="radio1">Radio Button 1</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="radio"
+              id="radio2"
+              value="radio2"
+            />
+            <label class="form-check-label" for="radio2">Radio Button 2</label>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="select" class="form-label">Select:</label>
+          <select class="form-select" id="select" name="select">
+            <option selected>Select an option</option>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="textarea" class="form-label">Textarea:</label>
+          <textarea
+            class="form-control"
+            id="textarea"
+            name="textarea"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <script
+      src="https://www.google.com/recaptcha/api.js?render=6LeBBqApAAAAAMk9wrblx4YRWTSiPXei_hnBaFTH"
+      async
+      defer
+    ></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.validate.min.js"></script>
+    <script src="../assets/js/additional-methods.min.js"></script>
+    <script src="../assets//js/block-ui.js"></script>
+    <script>
+      // Save to json file, also show when sent to server
+      // Google Recaptcha - check and report back
+      //    - https://developers.google.com/recaptcha/docs/v3
+      //    - https://www.google.com/recaptcha/admin/create
+      //    - https://developers.google.com/recaptcha/docs/verify
+      // Block UI library
+      // select2 with tags
+
+      // Site key - 6LeBBqApAAAAAMk9wrblx4YRWTSiPXei_hnBaFTH
+      // Secret key - 6LeBBqApAAAAAHXwX7kToCsqg22Ghozoe2l8zTxT
+
+      function serialize_form(form) {
+        let result = {};
+        $.each($("form").serializeArray(), function () {
+          result[this.name] = this.value;
+        });
+        return result;
+      }
+
+      function form_submit_handler(data) {
+        grecaptcha.ready(function () {
+          grecaptcha
+            .execute("6LeBBqApAAAAAMk9wrblx4YRWTSiPXei_hnBaFTH", {
+              action: "submit",
+            })
+            .then(function (token) {
+              console.log("TOKEN RECIVED " + token);
+              $.post(
+                "https://www.google.com/recaptcha/api/siteverify",
+                {
+                  secret: "6LeBBqApAAAAAHXwX7kToCsqg22Ghozoe2l8zTxT",
+                  response: token,
+                  // remoteip: optional param
+                },
+                function (data) {
+                  console.log("REMOTE DATA CAME AND IT IS ", data);
+                }
+              );
+            });
+        });
+      }
+
+      $("#username").focus(() => {
+        $("#username").val(
+          $("#first_name").val().toLowerCase() +
+            "-" +
+            $("#last_name").val().toLowerCase()
+        );
+      });
+
+      var form_object = $("#bootstrap-form");
+      var error = $(".alert-danger", form_object);
+      var success = $(".alert-success", form_object);
+
+      $(form_object).validate({
+        errorElement: "span", //default input error message container
+        errorClass: "help-block help-block-error", // default input error message class
+        rules: {
+          first_name: {
+            required: true,
+            minlength: 2,
+          },
+          last_name: {
+            required: true,
+            minlength: 2,
+          },
+          password: {
+            required: true,
+            minlength: 2,
+          },
+          confirm_password: {
+            required: true,
+            minlength: 2,
+            equalTo: "#password",
+          },
+        },
+        messages: {
+          first_name: {
+            required: "Mora ovo Bgmi",
+            minlength: "Mora bit bar 10",
+          },
+          last_name: {
+            required: "Mora ovo Bgmi",
+            minlength: "Mora bit bar 10",
+          },
+          password: {
+            required: "Mora ovo Bgmi",
+            minlength: "Mora bit bar 10",
+          },
+          confirm_password: {
+            required: "Mora ovo Bgmi",
+            minlength: "Mora bit bar 10",
+            equalTo: "The two provided are not the same",
+          },
+        },
+        highlight: function (element) {
+          // hightlight error inputs
+          $(element).closest(".form-group").addClass("has-error"); // set error class to the control group
+        },
+        unhighlight: function (element) {
+          // revert the change done by hightlight
+          $(element).closest(".form-group").removeClass("has-error"); // set error class to the control group
+        },
+        success: function (label) {
+          label.closest(".form-group").removeClass("has-error"); // set success class to the control group
+        },
+        submitHandler: function (form, event) {
+          event.preventDefault();
+          success.show();
+          error.hide();
+          if (form_submit_handler)
+            form_submit_handler(serialize_form(form_object));
+        },
+      });
+    </script>
+  </body>
+</html>
