@@ -89,33 +89,50 @@ This course provides a comprehensive introduction to web programming concepts an
 - Highcharts
 - Select2
 
-### Week 5: Document Object Model (DOM)
+### Week 5: Forms and validation
 
-- Introduction to the DOM
-- Accessing and manipulating HTML elements with JavaScript
-- Handling events with event listeners
-- Dynamic HTML content manipulation
+- Validating form data with JQuery
+- Utility libraries for blocking the UI and providing proper user experience
+- Integrating Google Recaptcha for in forms
+- Saving form data into JSON objects and files
+- Sending form data to API and acting on response
+- Creating utility custom-made library for all form validations with callbacks
 
-### Week 6: Introduction to Backend Technologies
+### Week 6: Frontend project structure
 
-- Overview of backend development
-- Introduction to Node.js and Express.js
-- Setting up a basic server with Node.js
-- Handling HTTP requests and responses
+- Structure of frontend project
 
-### Week 7: Introduction to Databases
+### Week 7: Backend project setup and connecting to database
 
 - Introduction to databases and database management systems
-- Working with SQLite
-- CRUD operations (Create, Read, Update, Delete) with SQL
-- Integrating a database with Node.js
 
-### Week 8: Building a Full-Stack Web Application
+### Week 8: Version Control Systems
 
 - Integrating frontend and backend
-- Creating RESTful APIs
-- Building dynamic web applications with frontend and backend interaction
-- Deploying a web application
+
+### Week 9: Web frameworks
+
+- Flight PHP
+
+### Week 10: OpenAPI 3.0 and Swagger
+
+- Flight PHP
+
+### Week 11: Coding Week: Project Structure Updates
+
+- Flight PHP
+
+### Week 12: Middlewares
+
+- Flight PHP
+
+### Week 13: CI/CD Continuous Integration and Continuous Delivery/Deployment
+
+- Flight PHP
+
+### Week 14: Websockets and WebRTC
+
+- Flight PHP
 
 ## Prerequisites
 
@@ -129,9 +146,6 @@ This course provides a comprehensive introduction to web programming concepts an
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web)
 - [FreeCodeCamp](https://www.freecodecamp.org/)
 - [Codecademy](https://www.codecademy.com/learn)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [Express.js Documentation](https://expressjs.com/)
-- [SQLite Documentation](https://www.sqlite.org/docs.html)
 
 ## License
 
@@ -141,6 +155,6 @@ This course material is licensed under the MIT License. See the [LICENSE](LICENS
 
 For any questions or concerns regarding the course, please contact:
 
-- [Dzelila Mehanovic](mailto:instructor@example.com)
-- [Becir Isakovic](mailto:instructor@example.com)
-- [Amela Vatres](mailto:ta@example.com)
+- [Dzelila Mehanovic](mailto:dzelila.mehanovic@ibu.edu.ba)
+- [Becir Isakovic](mailto:becir.isakovic@ibu.edu.ba)
+- [Amela Vatres](mailto:ta@amela.vatres@ibu.edu.ba)
