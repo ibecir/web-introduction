@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/spinkit.css" rel="stylesheet" />
+    <link href="../assets/css/dataTables.bootstrap5.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container mt-3">
+      <h2>Stacked form</h2>
+      <form id="tutorial-form" method="post">
+        <input id="user_id" name="user_id" type="hidden" />
+
+        <div class="mb-3 mt-3">
+          <label for="first_name">First name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="first_name"
+            placeholder="Enter first name"
+            name="first_name"
+          />
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter email"
+            name="email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Enter password"
+            name="password"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="password">Confirm password:</label>
+          <input
+            type="password"
+            class="form-control"
+            id="confirm_password"
+            placeholder="Please repeat your password"
+            name="confirm_password"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <div class="mt-5">
+        <table id="tutorials-table" class="table table-striped">
+          <thead>
+            <th>ID</th>
+            <th>Action</th>
+            <th>First name</th>
+            <th>Email</th>
+            <th>Password</th>
+          </thead>
+        </table>
+      </div>
+
+      <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div
+          id="success-toast"
+          class="toast hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-header">
+            <img src="..." class="rounded me-2" alt="..." />
+            <strong class="me-auto" id="toast-status">SUCCESS</strong>
+            <small id="toast-status-code">200</small>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="toast-body" id="toast-description"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/block-ui.js"></script>
+    <script src="../assets/js/jquery.validate.min.js"></script>
+    <script src="../assets/js/dataTables.bootstrap5.js"></script>
+    <script src="../assets/js/dataTables.js"></script>
+
+    <script src="./forms.js"></script>
+  </body>
+</html>
