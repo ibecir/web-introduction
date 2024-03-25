@@ -1,0 +1,300 @@
+<!-- https://jqueryvalidation.org/documentation/ -->
+<!-- https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/extended-ui-blockui.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Form Example</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/spinkit.css" rel="stylesheet" />
+    <link href="../assets/css/dataTables.bootstrap5.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Bootstrap Form Example</h2>
+      <form id="bootstrap-form" method="post">
+        <input type="hidden" class="form-control" id="id" name="id" />
+        <div class="mb-3">
+          <label for="text" class="form-label">First Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="first_name"
+            name="first_name"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="text" class="form-label">Last Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="last_name"
+            name="last_name"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="text" class="form-label">Username:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            name="username"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Input:</label>
+          <input type="email" class="form-control" id="email" name="email" />
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password Input:</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="confirm_password" class="form-label"
+            >Confirm Password Input:</label
+          >
+          <input
+            type="confirm_password"
+            class="form-control"
+            id="confirm_password"
+            name="confirm_password"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <table id="users-tbl" class="display" style="width: 100%"></table>
+
+      <button
+        type="button"
+        class="btn btn-primary"
+        id="liveToastBtn"
+        onclick="$('#liveToast').toast('show');"
+      >
+        Show live toast
+      </button>
+
+      <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div
+          id="liveToast"
+          class="toast"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-header">
+            <strong class="me-auto" id="toast-message"></strong>
+            <small id="toast-message-description"></small>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="toast-body" id="toast-message-description-long">
+            <span class="badge rounded-pill bg-danger"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://www.google.com/recaptcha/api.js?render=6LeBBqApAAAAAMk9wrblx4YRWTSiPXei_hnBaFTH"
+      async
+      defer
+    ></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.validate.min.js"></script>
+    <script src="../assets/js/additional-methods.min.js"></script>
+    <script src="../assets//js/block-ui.js"></script>
+    <script src="../assets/js/dataTables.js"></script>
+    <script src="../assets/js/dataTables.bootstrap5.js"></script>
+    <script>
+      // Save to json file, also show when sent to server
+      // Google Recaptcha - check and report back
+      //    - https://developers.google.com/recaptcha/docs/v3
+      //    - https://www.google.com/recaptcha/admin/create
+      //    - https://developers.google.com/recaptcha/docs/verify
+      // Block UI library
+      // select2 with tags
+
+      // Site key - 6LeBBqApAAAAAMk9wrblx4YRWTSiPXei_hnBaFTH
+      // Secret key - 6LeBBqApAAAAAHXwX7kToCsqg22Ghozoe2l8zTxT
+
+      function serialize_form(form) {
+        let result = {};
+        $.each($("form").serializeArray(), function () {
+          result[this.name] = this.value;
+        });
+        return result;
+      }
+
+      var users = [];
+      var ids = 1;
+
+      function form_submit_handler(data) {
+        $("#bootstrap-form")[0].reset();
+        grecaptcha.ready(function () {
+          grecaptcha
+            .execute("6LeBBqApAAAAAMk9wrblx4YRWTSiPXei_hnBaFTH", {
+              action: "submit",
+            })
+            .then(function (token) {
+              console.log("CAPTCHA TOKEN RECEIVED " + token);
+              $.post(
+                "http://localhost:8018/mobile-api/v1/api/sample",
+                JSON.stringify(data)
+              )
+                .done(function (data) {
+                  $("#toast-message-description-long > span").text(
+                    data.message
+                  );
+                  $("#toast-message-description").text("OK");
+                  $("#toast-message").text("Data came from backend");
+                  $("#liveToast").toast("show");
+                  data.data["id"] = ids;
+                  data.data[
+                    "action"
+                  ] = `<span onClick="editUser(${ids})">Edit</span>`;
+                  users.push(data.data);
+                  ids += 1;
+
+                  if ($.fn.dataTable.isDataTable("#users-tbl")) {
+                    $("#users-tbl").DataTable().destroy();
+                  }
+
+                  new DataTable("#users-tbl", {
+                    columns: [
+                      { data: "action" },
+                      { data: "id" },
+                      { data: "first_name" },
+                      { data: "last_name" },
+                      { data: "username" },
+                      { data: "email" },
+                    ],
+                    data: users,
+                  });
+                })
+                .fail(function (xhr) {
+                  console.log(xhr);
+                  $("#toast-message-description-long > span").text(
+                    xhr.responseJSON.message
+                  );
+                  $("#toast-message-description").text(xhr.status);
+                  $("#toast-message").text(xhr.statusText);
+                  $("#liveToast").toast("show");
+                });
+            });
+        });
+      }
+
+      const editUser = (userId) => {
+        var gUser = {};
+        $.each(users, (idx, user) => {
+          if (user.id === userId) {
+            gUser = user;
+            return false;
+          }
+        });
+
+        $("#id").val(gUser.first_name);
+        $("#first_name").val(gUser.first_name);
+        $("#last_name").val(gUser.last_name);
+      };
+
+      const blockUi = (element) => {
+        $(element).block({
+          message:
+            '<div class="spinner-border text-primary" role="status"></div>',
+          css: {
+            backgroundColor: "transparent",
+            border: "0",
+          },
+          overlayCSS: {
+            backgroundColor: "#000",
+            opacity: 0.25,
+          },
+        });
+      };
+
+      const unblockUi = (element) => {
+        $(element).unblock({});
+      };
+
+      $("#username").focus(() => {
+        $("#username").val(
+          $("#first_name").val().toLowerCase() +
+            "-" +
+            $("#last_name").val().toLowerCase()
+        );
+      });
+
+      var form_object = $("#bootstrap-form");
+      var error = $(".alert-danger", form_object);
+      var success = $(".alert-success", form_object);
+
+      $(form_object).validate({
+        errorElement: "span", //default input error message container
+        errorClass: "help-block help-block-error", // default input error message class
+        rules: {
+          first_name: {
+            required: true,
+            minlength: 2,
+          },
+          last_name: {
+            required: true,
+            minlength: 2,
+          },
+          password: {
+            required: true,
+            minlength: 2,
+          },
+          confirm_password: {
+            required: true,
+            minlength: 2,
+            equalTo: "#password",
+          },
+        },
+        messages: {
+          first_name: {
+            required: "Required field",
+            minlength: "It has to be al least 2 characters long.",
+          },
+          last_name: {
+            required: "Required field",
+            minlength: "It has to be al least 2 characters long.",
+          },
+          password: {
+            required: "Required field",
+            minlength: "It has to be al least 2 characters long.",
+          },
+          confirm_password: {
+            required: "Required field",
+            minlength: "It has to be al least 2 characters long.",
+            equalTo: "The two provided are not the same",
+          },
+        },
+        submitHandler: function (form, event) {
+          event.preventDefault();
+          success.show();
+          error.hide();
+          if (form_submit_handler)
+            form_submit_handler(serialize_form(form_object));
+        },
+      });
+    </script>
+  </body>
+</html>
