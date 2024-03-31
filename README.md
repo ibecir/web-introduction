@@ -101,6 +101,9 @@ This course provides a comprehensive introduction to web programming concepts an
 ### Week 6: Frontend project structure
 
 - Structure of frontend project
+- Utility functions
+- Sending the POST modal request
+- Server side datatable
 
 ### Week 7: Backend project setup and connecting to database
 
