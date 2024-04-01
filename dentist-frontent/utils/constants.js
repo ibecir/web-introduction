@@ -1,3 +1,3 @@
 var Constants = {
-    API_BASE_URL: "https://localhost:8080"
-}
+  API_BASE_URL: "http://localhost:8018/mobile-api/public/v1/",
+};

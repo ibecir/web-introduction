@@ -1,3 +1,7 @@
 1. Download template
     - https://startbootstrap.com/previews/sb-admin
 2. Create SPAPP from it
+3. Create Util functions
+
+-- Utility libraries used
+https://codeseven.github.io/toastr/demo.html
