@@ -1,5 +1,4 @@
-// https://startbootstrap.com/template/sb-admin
-const Utils = {
+var Utils = {
   init_spapp: function () {
     var app = $.spapp({
       templateDir: "./pages/",
@@ -21,16 +20,6 @@ const Utils = {
   },
   unblock_ui: function (element) {
     $(element).unblock({});
-  },
-  get_query_param: function (name) {
-    var regexS = "[\\?&]" + name + "=([^&#]*)",
-      regex = new RegExp(regexS),
-      results = regex.exec(window.location.search);
-    if (results == null) {
-      return "";
-    } else {
-      return decodeURIComponent(results[1].replace(/\+/g, " "));
-    }
   },
   get_datatable: function (
     table_id,
