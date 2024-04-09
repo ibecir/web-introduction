@@ -52,7 +52,7 @@ const Utils = {
     }
     var table = $("#" + table_id).DataTable({
       order: [
-        sort_column == null ? 1 : sort_column,
+        sort_column == null ? 2 : sort_column,
         sort_order == null ? "desc" : sort_order,
       ],
       orderClasses: false,

@@ -1,19 +1,7 @@
 var PatientService = {
-  reload_patients_datatable: function () {
-    Utils.get_datatable(
-      "tbl_patients",
-      Constants.API_BASE_URL + "get_patients.php",
-      [
-        { data: "action" },
-        { data: "first_name" },
-        { data: "last_name" },
-        { data: "created_at" },
-        { data: "email" },
-      ]
-    );
-  },
   open_edit_patient_modal: function (patient_id) {
     RestClient.get("get_patient.php?id=" + patient_id, function (data) {
+      console.log("DATA IS ", data);
       $("#add-patient-modal").modal("toggle");
       $("#add-patient-form input[name='id']").val(data.id);
       $("#add-patient-form input[name='first_name']").val(data.first_name);
@@ -23,18 +11,29 @@ var PatientService = {
     });
   },
   delete_patient: function (patient_id) {
-    if (
-      confirm(
-        "Do you want to delete patient with the id " + patient_id + "?"
-      ) == true
-    ) {
+    if (confirm("Are you sure you want to delete this patient?") == true) {
       RestClient.delete(
         "delete_patient.php?id=" + patient_id,
-        {},
+        { },
         function (data) {
-          PatientService.reload_patients_datatable();
+          PatientService.reload_patients_table();
         }
       );
+    } else {
+      console("Dismissed!");
     }
   },
+  reload_patients_table: function() {
+    Utils.get_datatable(
+      "tbl_patients",
+      Constants.API_BASE_URL + "get_patients_paginated.php",
+      [
+        { data: "action" },
+        { data: "first_name" },
+        { data: "last_name" },
+        { data: "email" },
+        { data: "created_at" },
+      ]
+    );
+  }
 };

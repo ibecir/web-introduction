@@ -77,8 +77,11 @@
         >
           <thead>
             <tr>
-              <th data-name="customer">Customer name</th>
-              <th data-name="created_at">Created at</th>
+              <th data-name="action">Actions</th>
+              <th data-name="first_name">First name</th>
+              <th data-name="last_name">Last name</th>
+              <th data-name="created_at">Date of creation</th>
+              <th data-name="email">Email</th>
             </tr>
           </thead>
         </table>
@@ -107,18 +110,39 @@
           ></button>
         </div>
         <div class="modal-body">
+          <input type="hidden" name="id" id="id" />
           <div class="mb-3">
-            <label for="name" class="col-form-label">Name:</label>
-            <input type="text" class="form-control" name="name" id="name" />
+            <label for="first_name" class="col-form-label">First name:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="first_name"
+              id="first_name"
+            />
           </div>
           <div class="mb-3">
-            <label for="name" class="col-form-label">Created at:</label>
+            <label for="last_name" class="col-form-label">Last name:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="last_name"
+              id="last_name"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="created_at" class="col-form-label"
+              >Date of creation:</label
+            >
             <input
               type="date"
               class="form-control"
               name="created_at"
               id="created_at"
             />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="col-form-label">Email:</label>
+            <input type="email" class="form-control" name="email" id="email" />
           </div>
         </div>
         <div class="modal-footer">
@@ -137,25 +161,18 @@
 </div>
 
 <script>
+  PatientService.reload_patients_datatable();
+
   FormValidation.validate("#add-patient-form", {}, function (data) {
     Utils.block_ui("#add-patient-modal");
     $('#add-patient-modal button[type="cancel"]').trigger("click");
 
-    $.post(Constants.API_BASE_URL + "sample/customers", data)
+    $.post(Constants.API_BASE_URL + "add_patient.php", data)
       .done(function (data) {
         Utils.unblock_ui("#add-patient-modal");
         $("#add-patient-modal").modal("toggle");
         toastr.success("You have successfully added the patient.");
-
-        Utils.get_datatable(
-          "tbl_patients",
-          Constants.API_BASE_URL + "sample/customers",
-          [{ data: "customer" }, { data: "created_at" }],
-          null,
-          function () {
-            console.log("CALLBACK FIRST");
-          }
-        );
+        PatientService.reload_patients_datatable();
       })
       .fail(function (xhr) {
         toastr.error(error);
