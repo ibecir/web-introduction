@@ -116,6 +116,8 @@ This course provides a comprehensive introduction to web programming concepts an
 ### Week 8: Version Control Systems
 
 - Git basic commands
+  - https://www.youtube.com/watch?v=f1wnYdLEpgI
+  - Strategies for merging remote changes
 - Github
   - issues
   - conflicts
