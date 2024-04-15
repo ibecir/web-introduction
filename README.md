@@ -122,6 +122,7 @@ This course provides a comprehensive introduction to web programming concepts an
   - conflicts
   - actions
   - tickets
+  - github keywords
 
 ### Week 9: Web frameworks
 
