@@ -107,7 +107,11 @@ This course provides a comprehensive introduction to web programming concepts an
 
 ### Week 7: Backend project setup and connecting to database
 
-- Introduction to databases and database management systems
+- Recap of SQL concepts
+- Recap of data modeling
+- Backend project structure
+- Multi layer DAO
+- Service layer
 
 ### Week 8: Version Control Systems
 
