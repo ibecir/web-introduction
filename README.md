@@ -118,6 +118,8 @@ This course provides a comprehensive introduction to web programming concepts an
 - Git basic commands
 - Github issues
 - Github conflicts
+- Github actions
+- Github tickets
 
 ### Week 9: Web frameworks
 
