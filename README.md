@@ -117,7 +117,6 @@ This course provides a comprehensive introduction to web programming concepts an
 
 - Git basic commands
   - https://www.youtube.com/watch?v=f1wnYdLEpgI
-  - One commit
 - Github
   - issues
   - conflicts
