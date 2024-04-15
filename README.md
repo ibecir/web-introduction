@@ -115,7 +115,8 @@ This course provides a comprehensive introduction to web programming concepts an
 
 ### Week 8: Version Control Systems
 
-- Integrating frontend and backend
+- Git basic commands
+- Github issues
 
 ### Week 9: Web frameworks
 
