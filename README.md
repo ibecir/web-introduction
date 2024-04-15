@@ -116,10 +116,11 @@ This course provides a comprehensive introduction to web programming concepts an
 ### Week 8: Version Control Systems
 
 - Git basic commands
-- Github issues
-- Github conflicts
-- Github actions
-- Github tickets
+- Github
+  - issues
+  - conflicts
+  - actions
+  - tickets
 
 ### Week 9: Web frameworks
 
