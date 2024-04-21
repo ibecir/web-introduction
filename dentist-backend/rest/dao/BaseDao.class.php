@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__FILE__) . "/../../config.php";
+require_once dirname(__FILE__) . "/../config.php";
 
 /**
  * The main class for interaction with database.
