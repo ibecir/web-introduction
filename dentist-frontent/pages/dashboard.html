@@ -164,7 +164,7 @@
   FormValidation.validate("#add-patient-form", {}, function (data) {
     Utils.block_ui("#add-patient-modal");
 
-    $.post(Constants.API_BASE_URL + "add_patient.php", data)
+    $.post(Constants.API_BASE_URL + "patients/add", data)
       .done(function (data) {
         $("#add-patient-modal").modal("toggle");
         toastr.success("You have successfully added the patient.");

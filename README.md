@@ -126,7 +126,22 @@ This course provides a comprehensive introduction to web programming concepts an
 
 ### Week 9: Web frameworks
 
+- Configuring XDebug with VSCode
+
+  - require vs require_once
+  - Windows
+    - https://medium.com/@asd66998854/php-code-debug-using-xampp-on-vscode-editor-97c5f6cc4487
+  - MacOS
+    - https://dev.to/scriptmint/installing-xdebug-3-on-macos-and-debug-in-vs-code-3l5h
+  - Linux
+    - https://php.tutorials24x7.com/blog/how-to-debug-php-using-xdebug-and-visual-studio-code-on-ubuntu
+
+- Composer package manager
+  - https://getcomposer.org/doc/00-intro.md
 - Flight PHP
+  - https://docs.flightphp.com/
+- CORS
+  - https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 
 ### Week 10: OpenAPI 3.0 and Swagger
 

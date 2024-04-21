@@ -13,7 +13,7 @@ var PatientService = {
   delete_patient: function (patient_id) {
     if (confirm("Are you sure you want to delete this patient?") == true) {
       RestClient.delete(
-        "delete_patient.php?id=" + patient_id,
+        "patients/delete/" + patient_id,
         { },
         function (data) {
           PatientService.reload_patients_table();
@@ -26,7 +26,8 @@ var PatientService = {
   reload_patients_table: function() {
     Utils.get_datatable(
       "tbl_patients",
-      Constants.API_BASE_URL + "get_patients_paginated.php",
+      // Constants.API_BASE_URL + "get_patients_paginated.php",
+      Constants.API_BASE_URL + "patients",
       [
         { data: "action" },
         { data: "first_name" },
