@@ -163,19 +163,20 @@
 
   FormValidation.validate("#add-patient-form", {}, function (data) {
     Utils.block_ui("#add-patient-modal");
-    // TODO send the form with the utility restclient
-    $.post(Constants.API_BASE_URL + "patients/add", data)
-      .done(function (data) {
+
+    RestClient.post(
+      "patients/add",
+      data,
+      function (response) {
+        Utils.unblock_ui("#add-patient-modal");
         $("#add-patient-modal").modal("toggle");
         toastr.success("You have successfully added the patient.");
-
         PatientService.reload_patients_table();
-      })
-      .fail(function (error) {
-        toastr.error(JSON.parse(error.responseText).error);
-      })
-      .always(function () {
+      },
+      function (xhr) {
         Utils.unblock_ui("#add-patient-modal");
-      });
+        toastr.error(xhr);
+      }
+    );
   });
 </script>

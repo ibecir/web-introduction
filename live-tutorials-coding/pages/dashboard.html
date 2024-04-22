@@ -167,15 +167,18 @@
     Utils.block_ui("#add-patient-modal");
     $('#add-patient-modal button[type="cancel"]').trigger("click");
 
-    $.post(Constants.API_BASE_URL + "patients/add", data) //add_patient.php
-      .done(function (data) {
+    RestClient.post(
+      "patients/add",
+      data,
+      function (response) {
         Utils.unblock_ui("#add-patient-modal");
         $("#add-patient-modal").modal("toggle");
         toastr.success("You have successfully added the patient.");
         PatientService.reload_patients_datatable();
-      })
-      .fail(function (xhr) {
+      },
+      function (xhr) {
         toastr.error(error);
-      });
+      }
+    );
   });
 </script>
