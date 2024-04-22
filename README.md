@@ -128,7 +128,6 @@ This course provides a comprehensive introduction to web programming concepts an
 
 - Configuring XDebug with VSCode
 
-  - require vs require_once
   - Windows
     - https://medium.com/@asd66998854/php-code-debug-using-xampp-on-vscode-editor-97c5f6cc4487
   - MacOS

@@ -163,7 +163,7 @@
 
   FormValidation.validate("#add-patient-form", {}, function (data) {
     Utils.block_ui("#add-patient-modal");
-
+    // TODO send the form with the utility restclient
     $.post(Constants.API_BASE_URL + "patients/add", data)
       .done(function (data) {
         $("#add-patient-modal").modal("toggle");

@@ -167,7 +167,7 @@
     Utils.block_ui("#add-patient-modal");
     $('#add-patient-modal button[type="cancel"]').trigger("click");
 
-    $.post(Constants.API_BASE_URL + "add_patient.php", data)
+    $.post(Constants.API_BASE_URL + "patients/add", data) //add_patient.php
       .done(function (data) {
         Utils.unblock_ui("#add-patient-modal");
         $("#add-patient-modal").modal("toggle");

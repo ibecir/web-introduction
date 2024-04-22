@@ -2,7 +2,7 @@ var PatientService = {
   reload_patients_datatable: function () {
     Utils.get_datatable(
       "tbl_patients",
-      Constants.API_BASE_URL + "get_patients.php",
+      Constants.API_BASE_URL + "patients", // get_patients.php
       [
         { data: "action" },
         { data: "first_name" },
@@ -13,7 +13,7 @@ var PatientService = {
     );
   },
   open_edit_patient_modal: function (patient_id) {
-    RestClient.get("get_patient.php?id=" + patient_id, function (data) {
+    RestClient.get("patients/" + patient_id, function (data) {
       $("#add-patient-modal").modal("toggle");
       $("#add-patient-form input[name='id']").val(data.id);
       $("#add-patient-form input[name='first_name']").val(data.first_name);
@@ -29,7 +29,7 @@ var PatientService = {
       ) == true
     ) {
       RestClient.delete(
-        "delete_patient.php?id=" + patient_id,
+        "patients/delete/" + patient_id,
         {},
         function (data) {
           PatientService.reload_patients_datatable();
