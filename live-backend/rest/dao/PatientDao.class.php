@@ -69,4 +69,10 @@ class PatientDao extends BaseDao {
             'id' => $id
         ]);
     }
+
+    public function get_all_patients(){
+        $query = "SELECT *
+                  FROM patients;";
+        return $this->query($query, []);
+    }
 }

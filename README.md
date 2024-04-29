@@ -144,7 +144,17 @@ This course provides a comprehensive introduction to web programming concepts an
 
 ### Week 10: OpenAPI 3.0 and Swagger
 
-- Flight PHP
+- Swagger setup
+- Using swagger parameters
+
+  - https://swagger.io/docs/specification/describing-parameters/
+
+- How to setup your swagger
+  1. Download the required library - composer require zircote/swagger-php:3.3.7
+  2. Add the vendor folder to our .gitignore file
+  3. Change configuration files (doc_setup.php, swagger.php in the public/v1/docs folder)
+  4. Visit you swagger setup BASE_URL + /public/v1/docs/
+  5. Document your routes based on the swagger documentation website shown above
 
 ### Week 11: Coding Week: Project Structure Updates
 

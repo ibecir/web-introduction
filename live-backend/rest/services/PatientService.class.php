@@ -33,4 +33,8 @@ class PatientService {
 
         $this->patient_dao->edit_patient($id, $patient);
     }
+
+    public function get_all_patients(){
+        return $this->patient_dao->get_all_patients();
+    }
 }
