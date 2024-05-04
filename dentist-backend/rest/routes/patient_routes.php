@@ -9,6 +9,9 @@ Flight::group('/patients', function() {
      *      path="/patients",
      *      tags={"patients"},
      *      summary="Get all patients",
+     *      security={
+     *          {"ApiKey": {}}
+     *      },
      *      @OA\Response(
      *           response=200,
      *           description="Get all patients"
@@ -108,13 +111,13 @@ Flight::group('/patients', function() {
      *             @OA\Property(property="first_name", required=true, type="string", example="Becir"),
      *             @OA\Property(property="last_name", required=true, type="string", example="Isakovic"),
      *             @OA\Property(property="email", required=true, type="string", example="becir.isakovic@ibu.edu.ba")
+     *             @OA\Property(property="password", required=true, type="string", example="strong")
      *           )
      *      ),
      * )
      */
     Flight::route('POST /add', function () {
         $payload = Flight::request()->data->getData();
-        
         if($payload['first_name'] == NULL || $payload['last_name'] == NULL || $payload['email'] == NULL) {
             Flight::halt(500, "Required parameters are missing!");
         }

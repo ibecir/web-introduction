@@ -15,7 +15,6 @@ Flight::set('patient_service', new PatientService());
  *      )
  * )
  */
-
 Flight::route('GET /doctors', function() {
     Flight::json([
         [

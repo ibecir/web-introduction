@@ -16,7 +16,7 @@
  *   )
  * )
  * @OA\SecurityScheme(
- *     securityScheme="ApiKeyAuth",
+ *     securityScheme="ApiKey",
  *     type="apiKey",
  *     in="header",
  *     name="Authentication"

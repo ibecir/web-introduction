@@ -15,6 +15,7 @@ class PatientService {
       }
 
       public function add_patient($patient) {
+            $patient['password'] = password_hash($patient['password'], PASSWORD_BCRYPT);
             return $this->patient_dao->add($patient);
       }
 

@@ -156,9 +156,11 @@ This course provides a comprehensive introduction to web programming concepts an
   4. Visit you swagger setup BASE_URL + /public/v1/docs/
   5. Document your routes based on the swagger documentation website shown above
 
-### Week 11: Coding Week: Project Structure Updates
+### Week 11: Json Web Token
 
-- Flight PHP
+- Installation
+  - composer require firebase/php-jwt
+- Setup JWT Secret
 
 ### Week 12: Middlewares
 
