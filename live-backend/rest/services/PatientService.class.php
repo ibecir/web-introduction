@@ -8,6 +8,7 @@ class PatientService {
         $this->patient_dao = new PatientDao();
     }
     public function add_patient($patient){
+        $patient['password'] = password_hash($patient['password'], PASSWORD_BCRYPT);
         return $this->patient_dao->add_patient($patient);
     }
     public function get_patients_paginated($offset, $limit, $search, $order_column, $order_direction){

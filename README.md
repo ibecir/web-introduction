@@ -158,9 +158,12 @@ This course provides a comprehensive introduction to web programming concepts an
 
 ### Week 11: Json Web Token
 
+- Introduction to JWT
 - Installation
   - composer require firebase/php-jwt
 - Setup JWT Secret
+- Create backend logic for issuing JWT
+- Create frontend logic for managing and storing JWT
 
 ### Week 12: Middlewares
 

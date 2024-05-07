@@ -2,6 +2,9 @@
 
 require_once __DIR__ . '/../services/PatientService.class.php';
 
+use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
+
 Flight::set('patient_service', new PatientService());
 
 /**
@@ -79,6 +82,16 @@ Flight::group('/patients', function() {
     });
 
     Flight::route('GET /', function() {
+        try {
+            $token = Flight::request()->getHeader("Authentication");
+            if(!$token)
+                Flight::halt(401, "Missing authentication header");
+
+            JWT::decode($token, new Key(JWT_SECRET, 'HS256'));
+        } catch (\Exception $e) {
+            Flight::halt(401, $e->getMessage());
+        }
+
         $payload = Flight::request()->query;
 
         $params = [
@@ -125,7 +138,8 @@ Flight::group('/patients', function() {
      *              @OA\Property(property="first_name", type="string", example="Some first name", description="Patient first name"),
      *              @OA\Property(property="last_name", type="string", example="Some last name", description="Patient last name"),
      *              @OA\Property(property="email", type="string", example="example@example.com", description="Patient email address"),
-     *              @OA\Property(property="created_at", type="string", format="date", example="2024-04-29", description="Patient email address")
+     *              @OA\Property(property="created_at", type="string", format="date", example="2024-04-29", description="Patient email address"),
+     *              @OA\Property(property="password", type="string", example="some_secret_password", description="Patient password")
      *          )
      *      )
      * )
