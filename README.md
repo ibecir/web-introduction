@@ -167,7 +167,7 @@ This course provides a comprehensive introduction to web programming concepts an
 
 ### Week 12: Middlewares
 
-- Flight PHP
+- Flight PHP Middleware
 
 ### Week 13: CI/CD Continuous Integration and Continuous Delivery/Deployment
 

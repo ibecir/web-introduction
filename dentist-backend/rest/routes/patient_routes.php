@@ -99,7 +99,7 @@ Flight::group('/patients', function() {
      * @OA\Post(
      *      path="/patients/add",
      *      tags={"patients"},
-     *      summary="Add food to customer meal plan",
+     *      summary="Add patient",
      *      @OA\Response(
      *           response=200,
      *           description="Logged user"
@@ -110,7 +110,7 @@ Flight::group('/patients', function() {
      *             required={"first_name", "last_name", "email"},
      *             @OA\Property(property="first_name", required=true, type="string", example="Becir"),
      *             @OA\Property(property="last_name", required=true, type="string", example="Isakovic"),
-     *             @OA\Property(property="email", required=true, type="string", example="becir.isakovic@ibu.edu.ba")
+     *             @OA\Property(property="email", required=true, type="string", example="becir.isakovic@ibu.edu.ba"),
      *             @OA\Property(property="password", required=true, type="string", example="strong")
      *           )
      *      ),
