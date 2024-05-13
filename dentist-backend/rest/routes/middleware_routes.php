@@ -24,7 +24,7 @@ Flight::route('/*', function() {
 });
 
 Flight::map('error', function($e) {
-    // TODO log all errors to file
+    // TODO log all errors to file or log them to your database
     file_put_contents('logs.txt', $e.PHP_EOL , FILE_APPEND | LOCK_EX);
 
     Flight::halt($e->getCode(), $e->getMessage());
