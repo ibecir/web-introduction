@@ -4,9 +4,10 @@ use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
 Flight::route('/*', function() {
-    if (strpos(Flight::request()->url, '/mobile/login/token') === 0)
+    // Token is not needed for login or register page
+    if (strpos(Flight::request()->url, '/auth/login') === 0) {
         return TRUE;
-    else {
+    } else {
         try {
             $token = Flight::request()->getHeader("Authentication");
             if(!$token)
@@ -20,4 +21,12 @@ Flight::route('/*', function() {
             Flight::halt(401, $e->getMessage());
         }
     }
+});
+
+Flight::map('error', function($e) {
+    // TODO log all errors to file
+    file_put_contents('logs.txt', $e.PHP_EOL , FILE_APPEND | LOCK_EX);
+
+    Flight::halt($e->getCode(), $e->getMessage());
+    Flight::stop($e->getCode());
 });
