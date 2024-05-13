@@ -1,8 +1,10 @@
 <?php
 
 require_once __DIR__ . '/../services/DoctorService.class.php';
+require_once __DIR__ . '/../services/PatientService.class.php';
 
 Flight::set('doctor_service', new DoctorService());
+Flight::set('patient_service', new PatientService());
 
 Flight::group('/doctors', function() {
     
@@ -28,5 +30,23 @@ Flight::group('/doctors', function() {
                 'last_name' => 'Mehanovic'
             ]
         ]);
+    });
+
+    /**
+     * @OA\Get(
+     *      path="/doctors/details",
+     *      tags={"doctors"},
+     *      summary="Get doctor details",
+     *      security={
+     *          {"ApiKey": {}}   
+     *      },
+     *      @OA\Response(
+     *           response=200,
+     *           description="Doctor details"
+     *      )
+     * )
+     */
+    Flight::route('GET /details', function() {
+        Flight::json(Flight::get('patient_service')->get_patient_by_id(Flight::get('user')->id));
     });
 });

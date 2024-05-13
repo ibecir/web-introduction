@@ -1,0 +1,32 @@
+It works
+Exception: It works in /Users/becir/Sites/localhost/web-introduction/live-backend/rest/routes/middleware_routes.php:13
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(354): call_user_func_array(Object(Closure), Array)
+#2 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Object(Closure), Array)
+#3 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/Engine.php(522): flight\core\Dispatcher->execute(Object(Closure), Array)
+#4 [internal function]: flight\Engine->_start()
+#5 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(379): call_user_func_array(Array, Array)
+#6 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Array, Array)
+#7 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(131): flight\core\Dispatcher->execute(Array, Array)
+#8 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(95): flight\core\Dispatcher->runEvent('start', Array)
+#9 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/Engine.php(113): flight\core\Dispatcher->run('start', Array)
+#10 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/Flight.php(119): flight\Engine->__call('start', Array)
+#11 /Users/becir/Sites/localhost/web-introduction/live-backend/index.php(9): Flight::__callStatic('start', Array)
+#12 {main}
+ErrorException: Attempt to read property "id" on null in /Users/becir/Sites/localhost/web-introduction/live-backend/rest/routes/patient_routes.php:27
+Stack trace:
+#0 /Users/becir/Sites/localhost/web-introduction/live-backend/rest/routes/patient_routes.php(27): flight\Engine->handleError(2, 'Attempt to read...', '/Users/becir/Si...', 27)
+#1 [internal function]: {closure}()
+#2 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(354): call_user_func_array(Object(Closure), Array)
+#3 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Object(Closure), Array)
+#4 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/Engine.php(522): flight\core\Dispatcher->execute(Object(Closure), Array)
+#5 [internal function]: flight\Engine->_start()
+#6 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(379): call_user_func_array(Array, Array)
+#7 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Array, Array)
+#8 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(131): flight\core\Dispatcher->execute(Array, Array)
+#9 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(95): flight\core\Dispatcher->runEvent('start', Array)
+#10 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/Engine.php(113): flight\core\Dispatcher->run('start', Array)
+#11 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/Flight.php(119): flight\Engine->__call('start', Array)
+#12 /Users/becir/Sites/localhost/web-introduction/live-backend/index.php(9): Flight::__callStatic('start', Array)
+#13 {main}

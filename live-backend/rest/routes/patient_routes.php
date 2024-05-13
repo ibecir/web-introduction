@@ -7,28 +7,26 @@ use Firebase\JWT\Key;
 
 Flight::set('patient_service', new PatientService());
 
-/**
- * @OA\Get(
- *      path="/doctors",
- *      tags={"doctors"},
- *      summary="Get all doctors - dummy route for understanding the benefit of tags in the swagger",
- *      @OA\Response(
- *           response=200,
- *           description="Array of all doctors in the databases"
- *      )
- * )
- */
-Flight::route('GET /doctors', function() {
-    Flight::json([
-        [
-            'first_name' => 'Becir',
-            'last_name' => 'Isakovic'
-        ]
-    ]);
-});
-
 Flight::group('/patients', function() {
     
+    /**
+     * @OA\Get(
+     *      path="/patients/info",
+     *      tags={"patients"},
+     *      summary="Get patients details",
+     *      security={
+     *          {"ApiKey": {}}   
+     *      },
+     *      @OA\Response(
+     *           response=200,
+     *           description="Patient details"
+     *      )
+     * )
+     */
+    Flight::route('GET /info', function() {
+        Flight::json(Flight::get('patient_service')->get_patient_by_id(Flight::get('user')->id));
+    });
+
     /**
      * @OA\Get(
      *      path="/patients/all",
@@ -82,16 +80,6 @@ Flight::group('/patients', function() {
     });
 
     Flight::route('GET /', function() {
-        try {
-            $token = Flight::request()->getHeader("Authentication");
-            if(!$token)
-                Flight::halt(401, "Missing authentication header");
-
-            JWT::decode($token, new Key(JWT_SECRET, 'HS256'));
-        } catch (\Exception $e) {
-            Flight::halt(401, $e->getMessage());
-        }
-
         $payload = Flight::request()->query;
 
         $params = [
