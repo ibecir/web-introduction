@@ -15,6 +15,13 @@ class PatientService {
         $count = $this->patient_dao->count_patients_paginated($search)['count'];
         $rows = $this->patient_dao->get_patients_paginated($offset, $limit, $search, $order_column, $order_direction);
 
+        foreach($rows as $id => $patient) {
+            $rows[$id]['action'] = '<div class="btn-group" role="group" aria-label="Actions">' .
+                                                '<button type="button" class="btn btn-warning" onclick="PatientService.open_edit_patient_modal('. $patient['id'] .')">Edit</button>' .
+                                                '<button type="button" class="btn btn-danger" onclick="PatientService.delete_patient('. $patient['id'] .')">Delete</button>' .
+                                            '</div>';
+        }
+
         return [
             'count' => $count,
             'data' => $rows

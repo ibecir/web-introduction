@@ -5,6 +5,7 @@ require_once __DIR__ . '/../services/PatientService.class.php';
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
+// Global variable that can be used under this key - patient_service
 Flight::set('patient_service', new PatientService());
 
 Flight::group('/patients', function() {
@@ -92,13 +93,6 @@ Flight::group('/patients', function() {
         ];
 
         $data = Flight::get('patient_service')->get_patients_paginated($params['start'], $params['limit'], $params['search'], $params['order_column'], $params['order_direction']);
-
-        foreach($data['data'] as $id => $patient) {
-            $data['data'][$id]['action'] = '<div class="btn-group" role="group" aria-label="Actions">' .
-                                                '<button type="button" class="btn btn-warning" onclick="PatientService.open_edit_patient_modal('. $patient['id'] .')">Edit</button>' .
-                                                '<button type="button" class="btn btn-danger" onclick="PatientService.delete_patient('. $patient['id'] .')">Delete</button>' .
-                                            '</div>';
-        }
 
         Flight::json([
             'draw' => $params['draw'],
