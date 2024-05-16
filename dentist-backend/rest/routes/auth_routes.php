@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../services/AuthService.class.php';
+require_once __DIR__ . '/../config.php';
 
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
@@ -44,7 +45,7 @@ Flight::group('/auth', function() {
 
         $token = JWT::encode(
             $payload, 
-            JWT_SECRET, 
+            Config::JWT_SECRET(), 
             /**
              * IMPORTANT:
              * You must specify supported algorithms for your application. See
