@@ -30,3 +30,71 @@ Stack trace:
 #11 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/Flight.php(119): flight\Engine->__call('start', Array)
 #12 /Users/becir/Sites/localhost/web-introduction/live-backend/index.php(9): Flight::__callStatic('start', Array)
 #13 {main}
+ErrorException: Undefined array key "data" in /Users/becir/Sites/localhost/web-introduction/live-backend/rest/services/PatientService.class.php:19
+Stack trace:
+#0 /Users/becir/Sites/localhost/web-introduction/live-backend/rest/services/PatientService.class.php(19): flight\Engine->handleError(2, 'Undefined array...', '/Users/becir/Si...', 19)
+#1 /Users/becir/Sites/localhost/web-introduction/live-backend/rest/routes/patient_routes.php(95): PatientService->get_patients_paginated(0, 10, '', 'first_name', 'desc')
+#2 [internal function]: {closure}()
+#3 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(354): call_user_func_array(Object(Closure), Array)
+#4 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Object(Closure), Array)
+#5 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/Engine.php(522): flight\core\Dispatcher->execute(Object(Closure), Array)
+#6 [internal function]: flight\Engine->_start()
+#7 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(379): call_user_func_array(Array, Array)
+#8 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Array, Array)
+#9 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(131): flight\core\Dispatcher->execute(Array, Array)
+#10 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(95): flight\core\Dispatcher->runEvent('start', Array)
+#11 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/Engine.php(113): flight\core\Dispatcher->run('start', Array)
+#12 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/Flight.php(119): flight\Engine->__call('start', Array)
+#13 /Users/becir/Sites/localhost/web-introduction/live-backend/index.php(9): Flight::__callStatic('start', Array)
+#14 {main}
+ErrorException: Undefined array key "data" in /Users/becir/Sites/localhost/web-introduction/live-backend/rest/services/PatientService.class.php:19
+Stack trace:
+#0 /Users/becir/Sites/localhost/web-introduction/live-backend/rest/services/PatientService.class.php(19): flight\Engine->handleError(2, 'Undefined array...', '/Users/becir/Si...', 19)
+#1 /Users/becir/Sites/localhost/web-introduction/live-backend/rest/routes/patient_routes.php(95): PatientService->get_patients_paginated(0, 10, '', 'first_name', 'desc')
+#2 [internal function]: {closure}()
+#3 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(354): call_user_func_array(Object(Closure), Array)
+#4 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Object(Closure), Array)
+#5 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/Engine.php(522): flight\core\Dispatcher->execute(Object(Closure), Array)
+#6 [internal function]: flight\Engine->_start()
+#7 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(379): call_user_func_array(Array, Array)
+#8 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Array, Array)
+#9 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(131): flight\core\Dispatcher->execute(Array, Array)
+#10 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(95): flight\core\Dispatcher->runEvent('start', Array)
+#11 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/Engine.php(113): flight\core\Dispatcher->run('start', Array)
+#12 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/Flight.php(119): flight\Engine->__call('start', Array)
+#13 /Users/becir/Sites/localhost/web-introduction/live-backend/index.php(9): Flight::__callStatic('start', Array)
+#14 {main}
+ErrorException: Undefined array key "data" in /Users/becir/Sites/localhost/web-introduction/live-backend/rest/services/PatientService.class.php:19
+Stack trace:
+#0 /Users/becir/Sites/localhost/web-introduction/live-backend/rest/services/PatientService.class.php(19): flight\Engine->handleError(2, 'Undefined array...', '/Users/becir/Si...', 19)
+#1 /Users/becir/Sites/localhost/web-introduction/live-backend/rest/routes/patient_routes.php(95): PatientService->get_patients_paginated(0, 10, '', 'first_name', 'desc')
+#2 [internal function]: {closure}()
+#3 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(354): call_user_func_array(Object(Closure), Array)
+#4 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Object(Closure), Array)
+#5 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/Engine.php(522): flight\core\Dispatcher->execute(Object(Closure), Array)
+#6 [internal function]: flight\Engine->_start()
+#7 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(379): call_user_func_array(Array, Array)
+#8 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Array, Array)
+#9 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(131): flight\core\Dispatcher->execute(Array, Array)
+#10 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(95): flight\core\Dispatcher->runEvent('start', Array)
+#11 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/Engine.php(113): flight\core\Dispatcher->run('start', Array)
+#12 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/Flight.php(119): flight\Engine->__call('start', Array)
+#13 /Users/becir/Sites/localhost/web-introduction/live-backend/index.php(9): Flight::__callStatic('start', Array)
+#14 {main}
+ErrorException: Undefined array key "data" in /Users/becir/Sites/localhost/web-introduction/live-backend/rest/services/PatientService.class.php:19
+Stack trace:
+#0 /Users/becir/Sites/localhost/web-introduction/live-backend/rest/services/PatientService.class.php(19): flight\Engine->handleError(2, 'Undefined array...', '/Users/becir/Si...', 19)
+#1 /Users/becir/Sites/localhost/web-introduction/live-backend/rest/routes/patient_routes.php(95): PatientService->get_patients_paginated(0, 10, '', 'first_name', 'desc')
+#2 [internal function]: {closure}()
+#3 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(354): call_user_func_array(Object(Closure), Array)
+#4 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Object(Closure), Array)
+#5 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/Engine.php(522): flight\core\Dispatcher->execute(Object(Closure), Array)
+#6 [internal function]: flight\Engine->_start()
+#7 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(379): call_user_func_array(Array, Array)
+#8 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Array, Array)
+#9 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(131): flight\core\Dispatcher->execute(Array, Array)
+#10 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/core/Dispatcher.php(95): flight\core\Dispatcher->runEvent('start', Array)
+#11 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/Engine.php(113): flight\core\Dispatcher->run('start', Array)
+#12 /Users/becir/Sites/localhost/web-introduction/live-backend/vendor/flightphp/core/flight/Flight.php(119): flight\Engine->__call('start', Array)
+#13 /Users/becir/Sites/localhost/web-introduction/live-backend/index.php(9): Flight::__callStatic('start', Array)
+#14 {main}

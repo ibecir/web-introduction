@@ -28,3 +28,168 @@ Stack trace:
 #10 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Flight.php(119): flight\Engine->__call('start', Array)
 #11 /Users/becir/Sites/localhost/web-introduction/dentist-backend/index.php(9): Flight::__callStatic('start', Array)
 #12 {main}
+Error: Undefined constant "JWT_SECRET" in /Users/becir/Sites/localhost/web-introduction/dentist-backend/rest/routes/middleware_routes.php:16
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(354): call_user_func_array(Object(Closure), Array)
+#2 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Object(Closure), Array)
+#3 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(522): flight\core\Dispatcher->execute(Object(Closure), Array)
+#4 [internal function]: flight\Engine->_start()
+#5 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(379): call_user_func_array(Array, Array)
+#6 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Array, Array)
+#7 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(131): flight\core\Dispatcher->execute(Array, Array)
+#8 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(95): flight\core\Dispatcher->runEvent('start', Array)
+#9 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(113): flight\core\Dispatcher->run('start', Array)
+#10 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Flight.php(119): flight\Engine->__call('start', Array)
+#11 /Users/becir/Sites/localhost/web-introduction/dentist-backend/index.php(18): Flight::__callStatic('start', Array)
+#12 {main}
+Error: Undefined constant "JWT_SECRET" in /Users/becir/Sites/localhost/web-introduction/dentist-backend/rest/routes/middleware_routes.php:16
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(354): call_user_func_array(Object(Closure), Array)
+#2 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Object(Closure), Array)
+#3 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(522): flight\core\Dispatcher->execute(Object(Closure), Array)
+#4 [internal function]: flight\Engine->_start()
+#5 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(379): call_user_func_array(Array, Array)
+#6 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Array, Array)
+#7 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(131): flight\core\Dispatcher->execute(Array, Array)
+#8 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(95): flight\core\Dispatcher->runEvent('start', Array)
+#9 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(113): flight\core\Dispatcher->run('start', Array)
+#10 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Flight.php(119): flight\Engine->__call('start', Array)
+#11 /Users/becir/Sites/localhost/web-introduction/dentist-backend/index.php(17): Flight::__callStatic('start', Array)
+#12 {main}
+Error: Undefined constant "JWT_SECRET" in /Users/becir/Sites/localhost/web-introduction/dentist-backend/rest/routes/middleware_routes.php:16
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(354): call_user_func_array(Object(Closure), Array)
+#2 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Object(Closure), Array)
+#3 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(522): flight\core\Dispatcher->execute(Object(Closure), Array)
+#4 [internal function]: flight\Engine->_start()
+#5 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(379): call_user_func_array(Array, Array)
+#6 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Array, Array)
+#7 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(131): flight\core\Dispatcher->execute(Array, Array)
+#8 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(95): flight\core\Dispatcher->runEvent('start', Array)
+#9 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(113): flight\core\Dispatcher->run('start', Array)
+#10 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Flight.php(119): flight\Engine->__call('start', Array)
+#11 /Users/becir/Sites/localhost/web-introduction/dentist-backend/index.php(17): Flight::__callStatic('start', Array)
+#12 {main}
+Error: Undefined constant "JWT_SECRET" in /Users/becir/Sites/localhost/web-introduction/dentist-backend/rest/routes/middleware_routes.php:16
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(354): call_user_func_array(Object(Closure), Array)
+#2 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Object(Closure), Array)
+#3 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(522): flight\core\Dispatcher->execute(Object(Closure), Array)
+#4 [internal function]: flight\Engine->_start()
+#5 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(379): call_user_func_array(Array, Array)
+#6 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Array, Array)
+#7 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(131): flight\core\Dispatcher->execute(Array, Array)
+#8 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(95): flight\core\Dispatcher->runEvent('start', Array)
+#9 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(113): flight\core\Dispatcher->run('start', Array)
+#10 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Flight.php(119): flight\Engine->__call('start', Array)
+#11 /Users/becir/Sites/localhost/web-introduction/dentist-backend/index.php(17): Flight::__callStatic('start', Array)
+#12 {main}
+Error: Undefined constant "JWT_SECRET" in /Users/becir/Sites/localhost/web-introduction/dentist-backend/rest/routes/middleware_routes.php:16
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(354): call_user_func_array(Object(Closure), Array)
+#2 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Object(Closure), Array)
+#3 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(522): flight\core\Dispatcher->execute(Object(Closure), Array)
+#4 [internal function]: flight\Engine->_start()
+#5 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(379): call_user_func_array(Array, Array)
+#6 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Array, Array)
+#7 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(131): flight\core\Dispatcher->execute(Array, Array)
+#8 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(95): flight\core\Dispatcher->runEvent('start', Array)
+#9 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(113): flight\core\Dispatcher->run('start', Array)
+#10 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Flight.php(119): flight\Engine->__call('start', Array)
+#11 /Users/becir/Sites/localhost/web-introduction/dentist-backend/index.php(17): Flight::__callStatic('start', Array)
+#12 {main}
+Error: Undefined constant "JWT_SECRET" in /Users/becir/Sites/localhost/web-introduction/dentist-backend/rest/routes/middleware_routes.php:16
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(354): call_user_func_array(Object(Closure), Array)
+#2 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Object(Closure), Array)
+#3 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(522): flight\core\Dispatcher->execute(Object(Closure), Array)
+#4 [internal function]: flight\Engine->_start()
+#5 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(379): call_user_func_array(Array, Array)
+#6 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Array, Array)
+#7 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(131): flight\core\Dispatcher->execute(Array, Array)
+#8 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(95): flight\core\Dispatcher->runEvent('start', Array)
+#9 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(113): flight\core\Dispatcher->run('start', Array)
+#10 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Flight.php(119): flight\Engine->__call('start', Array)
+#11 /Users/becir/Sites/localhost/web-introduction/dentist-backend/index.php(20): Flight::__callStatic('start', Array)
+#12 {main}
+Error: Undefined constant "JWT_SECRET" in /Users/becir/Sites/localhost/web-introduction/dentist-backend/rest/routes/middleware_routes.php:16
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(354): call_user_func_array(Object(Closure), Array)
+#2 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Object(Closure), Array)
+#3 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(522): flight\core\Dispatcher->execute(Object(Closure), Array)
+#4 [internal function]: flight\Engine->_start()
+#5 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(379): call_user_func_array(Array, Array)
+#6 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Array, Array)
+#7 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(131): flight\core\Dispatcher->execute(Array, Array)
+#8 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(95): flight\core\Dispatcher->runEvent('start', Array)
+#9 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(113): flight\core\Dispatcher->run('start', Array)
+#10 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Flight.php(119): flight\Engine->__call('start', Array)
+#11 /Users/becir/Sites/localhost/web-introduction/dentist-backend/index.php(20): Flight::__callStatic('start', Array)
+#12 {main}
+Error: Undefined constant "JWT_SECRET" in /Users/becir/Sites/localhost/web-introduction/dentist-backend/rest/routes/middleware_routes.php:16
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(354): call_user_func_array(Object(Closure), Array)
+#2 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Object(Closure), Array)
+#3 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(522): flight\core\Dispatcher->execute(Object(Closure), Array)
+#4 [internal function]: flight\Engine->_start()
+#5 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(379): call_user_func_array(Array, Array)
+#6 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Array, Array)
+#7 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(131): flight\core\Dispatcher->execute(Array, Array)
+#8 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(95): flight\core\Dispatcher->runEvent('start', Array)
+#9 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(113): flight\core\Dispatcher->run('start', Array)
+#10 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Flight.php(119): flight\Engine->__call('start', Array)
+#11 /Users/becir/Sites/localhost/web-introduction/dentist-backend/index.php(20): Flight::__callStatic('start', Array)
+#12 {main}
+Error: Undefined constant "JWT_SECRET" in /Users/becir/Sites/localhost/web-introduction/dentist-backend/rest/routes/middleware_routes.php:16
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(354): call_user_func_array(Object(Closure), Array)
+#2 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Object(Closure), Array)
+#3 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(522): flight\core\Dispatcher->execute(Object(Closure), Array)
+#4 [internal function]: flight\Engine->_start()
+#5 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(379): call_user_func_array(Array, Array)
+#6 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Array, Array)
+#7 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(131): flight\core\Dispatcher->execute(Array, Array)
+#8 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(95): flight\core\Dispatcher->runEvent('start', Array)
+#9 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(113): flight\core\Dispatcher->run('start', Array)
+#10 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Flight.php(119): flight\Engine->__call('start', Array)
+#11 /Users/becir/Sites/localhost/web-introduction/dentist-backend/index.php(20): Flight::__callStatic('start', Array)
+#12 {main}
+Error: Undefined constant "JWT_SECRET" in /Users/becir/Sites/localhost/web-introduction/dentist-backend/rest/routes/middleware_routes.php:16
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(354): call_user_func_array(Object(Closure), Array)
+#2 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Object(Closure), Array)
+#3 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(522): flight\core\Dispatcher->execute(Object(Closure), Array)
+#4 [internal function]: flight\Engine->_start()
+#5 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(379): call_user_func_array(Array, Array)
+#6 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Array, Array)
+#7 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(131): flight\core\Dispatcher->execute(Array, Array)
+#8 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(95): flight\core\Dispatcher->runEvent('start', Array)
+#9 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(113): flight\core\Dispatcher->run('start', Array)
+#10 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Flight.php(119): flight\Engine->__call('start', Array)
+#11 /Users/becir/Sites/localhost/web-introduction/dentist-backend/index.php(20): Flight::__callStatic('start', Array)
+#12 {main}
+Error: Undefined constant "JWT_SECRET" in /Users/becir/Sites/localhost/web-introduction/dentist-backend/rest/routes/middleware_routes.php:16
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(354): call_user_func_array(Object(Closure), Array)
+#2 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Object(Closure), Array)
+#3 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(522): flight\core\Dispatcher->execute(Object(Closure), Array)
+#4 [internal function]: flight\Engine->_start()
+#5 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(379): call_user_func_array(Array, Array)
+#6 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Array, Array)
+#7 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(131): flight\core\Dispatcher->execute(Array, Array)
+#8 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/core/Dispatcher.php(95): flight\core\Dispatcher->runEvent('start', Array)
+#9 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Engine.php(113): flight\core\Dispatcher->run('start', Array)
+#10 /Users/becir/Sites/localhost/web-introduction/dentist-backend/vendor/flightphp/core/flight/Flight.php(119): flight\Engine->__call('start', Array)
+#11 /Users/becir/Sites/localhost/web-introduction/dentist-backend/index.php(20): Flight::__callStatic('start', Array)
+#12 {main}
