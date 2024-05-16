@@ -2,7 +2,8 @@
 
 require __DIR__ . '/../../../vendor/autoload.php';
 
-define('BASE_URL', 'http://localhost:8018/web-introduction/dentist-backend/');
+// define('BASE_URL', 'http://localhost:8018/web-introduction/dentist-backend/');
+define('BASE_URL', 'http://localhost/dentist-backend/');
 
 error_reporting(0);
 
