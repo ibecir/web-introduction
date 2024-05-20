@@ -175,6 +175,7 @@ This course provides a comprehensive introduction to web programming concepts an
   - Create DO database
   - Create local DB dump
   - Import dump to a remote DO database
+  - Set the environment variables
 
 ### Week 14: Websockets and WebRTC
 

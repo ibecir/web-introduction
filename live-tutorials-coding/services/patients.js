@@ -2,7 +2,7 @@ var PatientService = {
   reload_patients_datatable: function () {
     Utils.get_datatable(
       "tbl_patients",
-      Constants.API_BASE_URL + "patients", // get_patients.php
+      Constants.get_api_base_url() + "patients", // get_patients.php
       [
         { data: "action" },
         { data: "first_name" },
