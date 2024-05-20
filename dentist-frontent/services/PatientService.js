@@ -27,7 +27,7 @@ var PatientService = {
     Utils.get_datatable(
       "tbl_patients",
       // Constants.API_BASE_URL + "get_patients_paginated.php",
-      Constants.API_BASE_URL + "patients",
+      Constants.get_api_base_url() + "patients",
       [
         { data: "action" },
         { data: "first_name" },
