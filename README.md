@@ -171,7 +171,10 @@ This course provides a comprehensive introduction to web programming concepts an
 
 ### Week 13: CI/CD Continuous Integration and Continuous Delivery/Deployment
 
-- Flight PHP
+- DigitalOcean Deployment
+  - Create DO database
+  - Create local DB dump
+  - Import dump to a remote DO database
 
 ### Week 14: Websockets and WebRTC
 
