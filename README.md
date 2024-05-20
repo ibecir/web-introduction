@@ -168,10 +168,18 @@ This course provides a comprehensive introduction to web programming concepts an
 ### Week 12: Middlewares
 
 - Flight PHP Middleware
+- Middleware for global error handling
 
 ### Week 13: CI/CD Continuous Integration and Continuous Delivery/Deployment
 
-- Flight PHP
+- DigitalOcean Deployment
+  - Create DO database
+  - Create local DB dump
+  - Import dump to a remote DO database
+  - Set the environment variables
+  - Changes to following files
+    - swagger.php
+    - constants.js
 
 ### Week 14: Websockets and WebRTC
 
